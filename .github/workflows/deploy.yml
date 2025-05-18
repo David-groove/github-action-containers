@@ -9,7 +9,7 @@ env:
   MONGODB_DB_NAME: gha-demo
 jobs:
   test:
-    environment: testing
+    environment: new-test
     runs-on: ubuntu-latest
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
@@ -41,7 +41,7 @@ jobs:
       - name: Output information
         env:
           PORT: 3000
-        run: |        
+        run: |
           echo "MONGODB_DB_NAME: $MONGODB_DB_NAME"
           echo "MONGODB_USERNAME: $MONGODB_USERNAME"
           echo "${{ env.PORT }}"
